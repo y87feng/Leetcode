@@ -24,3 +24,29 @@ public:
         return next_index+1;
     }
 };
+
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        if (head == nullptr) return head;
+        int len = 0;
+        auto cur = head;
+
+        while (cur) {
+            len++;
+            cur = cur->next;
+        }
+
+        if (len == n) return head->next;
+        auto pre = head;
+        for (int i = 0; i < len; i++) {
+            if (len - i == n+1) {
+                pre->next = pre->next->next;
+                break;
+            }
+            pre = pre->next;
+        }
+        return head;
+    }
+    
+};
