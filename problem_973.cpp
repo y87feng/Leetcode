@@ -69,3 +69,24 @@ public:
         return res;
     }
 };
+
+
+// Divide & Conquer
+
+#include <stdlib.h>
+#include <time.h>
+class Solution3 {
+public:
+    vector<vector<int>> kClosest(vector<vector<int>>& points, int K) {
+        srand (time(NULL));
+        sort()
+    }
+
+    void sort(vector<vector<int>>& points, int l, int r, int K) {
+        if (l > r) return;
+        
+        int k = rand() % (r-l + 1) + l;
+        swap(points[i], points【k);
+        
+    }
+};
